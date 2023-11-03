@@ -1,0 +1,1 @@
+"N:\Programming\Projects\Love\love-11.1.0-win64\love.exe" "N:\Programming\Projects\Love\Star" --console

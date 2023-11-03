@@ -1,0 +1,31 @@
+TODO:
+	* Add world context
+	* Add player
+	* Add Cards
+		* With player energy requirments
+	* UiPlacer?
+
+W20: 
+	* Not only for W20 as I worked on these in very short sessions ~once a week
+	* UiPanel now only has one list instead of three (draw, input, child panels)
+	* Slight improvements to the half assed card and pile system
+
+W15:
+	* IntrusiveList, and moved draw list to use that. And input as using an unorder set doesn't work well with overlapping things
+
+W14:
+	* Started on cards. (uncommited)
+	* Very basic string id system
+
+W13
+	* Gameplay PowerSystem and updating Ui
+	* Updated Text
+	* Even better hot reloading
+
+W12:
+	* No more unrecoverable errors, will restart everything when failing
+	* UiPanel redo input
+	* Basic button
+	* Basic PowerSystem ui
+	* Redid the drawing system.
+	* Added Drawable

@@ -1,0 +1,2130 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"setAt",
+				"setAtFrom"
+			],
+			[
+				"draw",
+				"drawCard"
+			],
+			[
+				"card",
+				"card_data"
+			],
+			[
+				"set",
+				"setHoldPos"
+			],
+			[
+				"on",
+				"onThere"
+			],
+			[
+				"drw",
+				"drawPile"
+			],
+			[
+				"dra",
+				"drawFunc"
+			],
+			[
+				"max",
+				"maxCards"
+			],
+			[
+				"Ui",
+				"UiHand"
+			],
+			[
+				"te",
+				"textColor"
+			],
+			[
+				"hover",
+				"hoverTextColor"
+			],
+			[
+				"onM",
+				"onMouseMove"
+			],
+			[
+				"for",
+				"fori\tfor i,v in ipairs()"
+			],
+			[
+				"_",
+				"_tickNode"
+			],
+			[
+				"_ui",
+				"_uiRoot"
+			],
+			[
+				"push",
+				"pushFront"
+			],
+			[
+				"tostr",
+				"tostring"
+			],
+			[
+				"_in",
+				"_inputChild"
+			],
+			[
+				"de",
+				"destroy"
+			],
+			[
+				"iter",
+				"iterate"
+			],
+			[
+				"prev",
+				"prevItem"
+			],
+			[
+				"font",
+				"fonts"
+			],
+			[
+				"po",
+				"powerSystem"
+			],
+			[
+				"new",
+				"newText"
+			],
+			[
+				"_pow",
+				"_powerSystem"
+			],
+			[
+				"power",
+				"powerSys"
+			],
+			[
+				"init",
+				"initSystems"
+			],
+			[
+				"safe",
+				"safeReload"
+			],
+			[
+				"keep",
+				"keepH"
+			],
+			[
+				"kee",
+				"keepH"
+			],
+			[
+				"co",
+				"config"
+			],
+			[
+				"test",
+				"testText"
+			],
+			[
+				"_kee",
+				"_keepW"
+			],
+			[
+				"off",
+				"offset"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"_u",
+				"_uiObj"
+			],
+			[
+				"remove",
+				"removeDrawable"
+			],
+			[
+				"Tex",
+				"TextWrapper"
+			],
+			[
+				"Drw",
+				"Drawable"
+			],
+			[
+				"Draw",
+				"Drawable"
+			],
+			[
+				"fu",
+				"full_reload"
+			],
+			[
+				"Te",
+				"TextButton"
+			],
+			[
+				"han",
+				"handleFunc"
+			],
+			[
+				"chi",
+				"child"
+			],
+			[
+				"reload",
+				"reload_func"
+			],
+			[
+				"real",
+				"reload_func"
+			],
+			[
+				"rel",
+				"reload_func"
+			],
+			[
+				"CI",
+				"Connection"
+			],
+			[
+				"o",
+				"output"
+			],
+			[
+				"othe",
+				"otherE"
+			],
+			[
+				"be",
+				"bestDist"
+			],
+			[
+				"i",
+				"instanceOf"
+			],
+			[
+				"other",
+				"otherC"
+			],
+			[
+				"dist",
+				"distSq"
+			],
+			[
+				"ch",
+				"child"
+			],
+			[
+				"root",
+				"rootCheck"
+			],
+			[
+				"conn",
+				"connect"
+			],
+			[
+				"tra",
+				"translatePoint"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"from",
+				"fromTable"
+			],
+			[
+				"f",
+				"function\tfunction"
+			],
+			[
+				"fun",
+				"function\tfunction"
+			],
+			[
+				"st",
+				"startswith"
+			],
+			[
+				"print",
+				"print_diff"
+			],
+			[
+				"no",
+				"no_newline"
+			],
+			[
+				"try",
+				"try\tTry/Except"
+			],
+			[
+				"in",
+				"inColor"
+			],
+			[
+				"g",
+				"gl_GlobalInvocationID"
+			],
+			[
+				"ve",
+				"vertexBuffer"
+			],
+			[
+				"next",
+				"nextPrime"
+			],
+			[
+				"add",
+				"addNextPrime"
+			],
+			[
+				"is",
+				"isDivisible"
+			],
+			[
+				"isP",
+				"isPrimeBad2"
+			],
+			[
+				"isPr",
+				"isPrimeBad"
+			],
+			[
+				"fi",
+				"firstTrue"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.lua",
+			"settings":
+			{
+				"buffer_size": 2728,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "# Embark Worms submission 'diary'\n\nTomas Möre 2023\n\nI wrote the problems I've encoutered during with notes on how and why I solved it that way.\nSkimming thoguht this should give you a rough idea about what I did.\n\nThis document is not well structured but is roughly chronological.\n\nMost minor fixes not deemed imporant are left out of this document.\n\n\n## Hours spent\nAround 10? Lost count.\n\nLost embarassingly long time to a bug that would have been caught with\nstricter compiler warnings.\n\n\n## Default worm length length\nDecrease default length 5 as specified by the assignment.\n\n## Worm stretched out while boosting\nCause: boosting increases distance between the circles of the\nworm.\n\nSimplest solution:\nMaking boost decrease the step time of the worm instead. This will make the movement in the two modes identical. Possible negative impact: increased computation.\n\n\n## Turning speed not satisfying:\nIntroduce a target the worm wants to reach.\nThe mouse doesn't directly move the worms direction, rather, with\neach update the worm will turn at a certain speed in the direction of the desired position.\n\n\n## Minor update \"fix\"\nIn case we would have missed some desired updates, we're making sure to catch up by looping over the actual update several times.\nMight not be desired behaviour. Depends on \"correctness\" vs performance, I tend to prefer correctness.\n\n\n## AI spawn\nIt is preferable to spawn the AI Worms a little bit randomly every time, to \"spice\" it up a\nlittle. However we also need to make sure that the AI's don't spawn too close to the player as that wouldn't be satisfying either.\n\nI decided to introduce a `SafeStartingArea` box in which enemies aren't allowed to spawn. The spawn\nwill simply re-randomize the starting area if inside this box, while one could of course\ndo some math to reach the same results. However it would be more complicated code and wouldn't do a\npractical difference in our case.\n\n\n\n## Storage and handling of worms\nThe initial implementation had a separate field in the class for the player and the player worms, to\nmake things logically simpler I instead create an array of all the worms for storage, and a separate\nvector of pointers to the original Worms that we can iterate through. This makes is easier to act\nupon all worms but also makes it possible to e.g have multiple AI worms.\n\nWe do all Worm actions on the array of pointers, that way we can remove the worms that should no\nlonger be updated.\n\nI'll put the AI controls in a separate structure to separate the concerns of the the general worm\nlogic and the control of the worms.\n\nIf we were to create a bigger game, or the number of worms increase during play, the choice of a vector\nwould be bad as the rest of the framework expects stable pointers to the Worms. However here it is\nfine.\n\n\n## Update method messy\nUpdate method was a bit too messy to get a good overview of what it did and it had several\n\"distinct\" and locally unrelated parts. Decided to break it down into smaller phases, PlayerUpdate,\nAIUpdate, and Render\n\n\n## File structure\nI thought it is quite messy to have the Worm implementation and the general game logic\nimplementation in the same file. I moved Worm into its own header file.\n\n(Header file since the project is quite small and compile time is irrelevant)\n\nIn general, I also prefer to separate the definitions and declarations of code (even inline\nones) for the purpose of making it easier to get an overview of the API.\nI'll skip that here because the project is so small.\n\n\n# Quitting the game if player touches the ceiling wall\nSimple check after update to see if the player is inside of the bounds of the map. \nThis is done by checking the new head element of the player.\n\n\n## Collision handling / Ray intersection\nThe most computationally expensive task is going to be detecting collisions / intersections between\nobjects. While one can spend a lot of time optimizing various intersection algorithms the most\nefficent way of performing them is to not do it.\n\nI've decided to implement a grid based bucketing of objects on the map in the\n\"FCollisionGrid\". The idea is that we split the entire gaming area up into small sections in which\nwe register the objects in it. When checking for a collision we can then avoid doing intersection\nchecking on most of the things in the game world.\n\nI decided that each grid cell can contain at most 16 objects. If more objects are inserted in the\ncell, they are simply discarded from collision checking, this should be safe since the other objects\nin the same space should contain enough data for doing proper decisions.\n\nI decided to make each Grid 32 x 32 units big, this was chosen from the size of the worm\nhead. Adjusting this value for performance could be nice, however I'd avoid premature optmization.\n\nThe idea is that the Grid is reset between update calls and we write all world objects to it before\nany entity update.\n\nAs for the collision checks themselves I've added them in `WormsGame/Math.h`\n\n## Storage of points\nThe default implementation of how to store the \"Points\" of the worms used an std::vector which\nerases the first element every time it creates a new segment. While I've not measured the\nperformance impact of it, it gives me the petpeeves to see it there. I've therefore included a\nrudimentary implementation of an array based deque (The one in the standard library often uses a\nlinked list as a backend, that isn't much better than the original).\n\nA sad side effect is that I had to provide an alternative rendering method that acceps the deque\ninstead. I've done so in `FWormsVideoHelpExt.h`\n\n## Enemy AI\nThe AI sends out rays in 7 angles `{-100, -40, -15, 0, 15, 40, 100}`\nThe AI either has a target or goes straight ahead.\n\n- If the AI ray senses a danger (other worm or wall) it will panic and go in the other way.\n- If it senses multiple dangers it takes the average point of all dangers and goes the other way\n- If it discovers food it notes it down, it always notes down the closest food it knows about.\n- If it isn't in danger it will set the closest food item as the new target.\n- It remebers food even if it was scared away.\n- It will only attempt to chase a piece of food it found for at most 0.5 seconds. In order to stop\n  certain circling behaviour. This is not a good fix.\n\n\n## Paralellisation and optimization\nAfter doing all of the above I thought that the game performed reasonably well without any\nparallelisation. However, the game could almost trivially be parallelized in chunks as the game loop\nis split into three parallelizable chunks.\n\n\n## Audio\nRan out of time so decided to not do anything with it.\n",
+			"file": "/C/Users/Cpt. Red/Documents/Temp/embark_test_tomas_more/embark_zipcopy/WormsGame/diary.md",
+			"file_size": 6632,
+			"file_write_time": 133184202760000000,
+			"settings":
+			{
+				"buffer_size": 6631,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Class.lua",
+			"settings":
+			{
+				"buffer_size": 1662,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/N/Programming/Projects/Love/StarOld/Class.lua",
+			"settings":
+			{
+				"buffer_size": 1647,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/N/Programming/Projects/Love/Dots/Class.lua",
+			"settings":
+			{
+				"buffer_size": 1322,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UiPlacer.lua",
+			"settings":
+			{
+				"buffer_size": 1885,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Rect.lua",
+			"settings":
+			{
+				"buffer_size": 557,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/N/Programming/Projects/Love/Other/UiPlacer.lua",
+			"settings":
+			{
+				"buffer_size": 9345,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Card.lua",
+			"settings":
+			{
+				"buffer_size": 636,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "World.lua",
+			"settings":
+			{
+				"buffer_size": 145,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data/TestCards.lua",
+			"settings":
+			{
+				"buffer_size": 406,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "DefineCard.lua",
+			"settings":
+			{
+				"buffer_size": 100,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UiPanel.lua",
+			"settings":
+			{
+				"buffer_size": 4950,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "IntrusiveList.lua",
+			"settings":
+			{
+				"buffer_size": 4898,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Button.lua",
+			"settings":
+			{
+				"buffer_size": 2088,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UiObject.lua",
+			"settings":
+			{
+				"buffer_size": 1607,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Drawable.lua",
+			"settings":
+			{
+				"buffer_size": 2548,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "UiPile.lua",
+			"settings":
+			{
+				"buffer_size": 1365,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/N/Programming/Projects/Love/Dots/Table.lua",
+			"settings":
+			{
+				"buffer_size": 1291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/N/Programming/Projects/Love/Dots/main.lua",
+			"settings":
+			{
+				"buffer_size": 1777,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Hand.lua",
+			"settings":
+			{
+				"buffer_size": 941,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Table.lua",
+			"settings":
+			{
+				"buffer_size": 2273,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 31 files for \"print\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Card.lua:\n   15  \tself.def = card_data[id];\n   16  \tif not self.def then\n   17: \t\tprint(\"Could not find card definition for card: '\" .. id .. \"'.\")\n   18  \tend\n   19: \ttable.sprint(self.def)\n   20  end\n   21  \n   ..\n   33  \n   34  function Card:__gc()\n   35: \tprint(\"CG!!! Card\")\n   36  end\n   37  \n\nN:\\Programming\\Projects\\Love\\Star\\Class.lua:\n   83  \tend\n   84  \tmt.__gc = function()\n   85: \t\tprint(\"DELETE STUFF!!!!\")\n   86  \tend\n   87  \tmt.__index = self\n\nN:\\Programming\\Projects\\Love\\Star\\data\\TestCards.lua:\n   19  \tid = \"test1\",\n   20  \tplay = function()\n   21: \t\tprint(\"HELLO THERE!\");\n   22  \tend,\n   23  })\n   ..\n   26  \tid = \"test2\",\n   27  \tplay = function()\n   28: \t\tprint(\"HELLO THERE!\");\n   29  \tend,\n   30  })\n\nN:\\Programming\\Projects\\Love\\Star\\fonts\\consola.ttf:\n    <binary>\n\nN:\\Programming\\Projects\\Love\\Star\\IntrusiveList.lua:\n  157  \t\treturn\n  158  \tend\n  159: \tprint(\"TEST FAILED! \" .. test .. \" Expected: '\" .. expected .. \"' got '\" .. got .. \"'\")\n  160  end\n  161  \n\nN:\\Programming\\Projects\\Love\\Star\\main.lua:\n   23  \t\tend\n   24  \tend\n   25: \tprint(full and \"RESET\" or \"RELOAD\", pcall(dofile, \"main.lua\") )\n   26  \n   27  \tif full then\n   ..\n   68  \tlg.setColor(1, 0, 0)\n   69  \tlocal grb = \" \" .. tostring(math.floor(collectgarbage(\"count\"))) .. \"Kb\"\n   70: \tlg.print(love.timer.getFPS()..grb, 0, 0)\n   71  \tlg.setColor(1, 1, 1)\n   72  \n\nN:\\Programming\\Projects\\Love\\Star\\Note.lua:\n   40  \tend\n   41  \t\n   42: \tlove.graphics.print(table.concat(Note.timedText, \"\\n\") .. middle .. table.concat(Note.text, \"\\n\"), 0, 10)\n   43  \tNote.text = {}\n   44  end\n\nN:\\Programming\\Projects\\Love\\Star\\Strings.lua:\n   24  \tres = self.missing[id]\n   25  \tif not res then\n   26: \t\tprint(\"Missing string with id'\"..id..\"'\")\n   27  \t\tself.missing[id] = true\n   28  \tend\n\nN:\\Programming\\Projects\\Love\\Star\\Table.lua:\n    7  end\n    8  \n    9: function table.sprint(t, inTabs)\n   10: \tprint(t)\n   11  \t\n   12: \tlocal function sprintRecursive(t, recursion, inTabs)\n   13  \t\tif not inTabs then inTabs = \"\" end\n   14  \t\tlocal tabs = inTabs .. \"\\t\"\n   15  \t\t\n   16  \t\tif recursion[t] then\n   17: \t\t\tprint(tabs .. \"RECURSION \" .. tostring(t));\n   18  \t\t\treturn\n   19  \t\tend\n   ..\n   21  \t\t\n   22  \t\tif #tabs > 6 then\n   23: \t\t\tprint(tabs .. \"TABLE IS TOO NESTED\")\n   24  \t\t\treturn\n   25  \t\tend\n   26  \t\t\n   27  \t\tfor k,v in pairs(t) do\n   28: \t\t\tprint(tabs .. tostring(k), v)\n   29  \t\t\tif type(v) == \"table\" then\n   30: \t\t\t\tsprintRecursive(v, recursion, tabs)\n   31  \t\t\tend\n   32  \t\tend\n   ..\n   35  \tlocal recursion = {}\n   36  \tif type(t) == \"table\" then\n   37: \t\tsprintRecursive(t, recursion)\n   38  \tend\t\n   39  end\n   40  \n   41: function table.print(t, inTabs)\n   42: \tprint(t)\n   43  \t\n   44: \tlocal function printRecursive(t, inTabs)\n   45  \t\tif not inTabs then inTabs = \"\" end\n   46  \t\tlocal tabs = inTabs .. \"\\t\"\n   47  \t\tfor k,v in pairs(t) do\n   48: \t\t\tprint(tabs .. tostring(k), v)\n   49  \t\t\tif type(v) == \"table\" then\n   50: \t\t\t\tprintRecursive(v, tabs)\n   51  \t\t\tend\n   52  \t\tend\n   ..\n   54  \t\n   55  \tif type(t) == \"table\" then\n   56: \t\tprintRecursive(t)\n   57  \tend\t\n   58  end\n\nN:\\Programming\\Projects\\Love\\Star\\TestScene.lua:\n   10  \n   11  dofile(\"Data/TestCards.lua\")\n   12: table.sprint(card_data)\n   13  \n   14  local lg = love.graphics\n\nN:\\Programming\\Projects\\Love\\Star\\UiCard.lua:\n   75  \n   76  \tlg.setFont(fonts.normal)\n   77: \tlg.print(self.card.title, 4, 4)\n   78  \n   79  \tUiCard.super._draw(self)\n\nN:\\Programming\\Projects\\Love\\Star\\UiPile.lua:\n   20  \tlg.rectangle(\"line\", 0, 0, self.w, self.h)\n   21  \n   22: \tlg.printf(tostring(#self), 0, self.h * 0.5 - 7, self.w, \"center\")\n   23  \n   24  \tUiPile.super._draw(self)\n\nN:\\Programming\\Projects\\Love\\Star\\Util.lua:\n    7          reload_func = reload_func or function() dofile(\"main.lua\") end\n    8          repeat\n    9:             print( select(2, unpack(res)) )\n   10:             print( \"Waiting for input for reload...\" )\n   11              res = { xpcall( reload_func, debug.traceback, io.read() ) } -- send io to reload func\n   12          until res[1]\n   ..\n  124  \n  125      local res = recursive_string_find( item, str )\n  126:     local printed_tables = {}\n  127      local allow_preview = #res.found_leafs < 80\n  128      for k, v in pairs( res.found_leafs ) do\n  ...\n  136          local prev_node = v.prev and v.prev.node\n  137          if prev_node and allow_preview then\n  138:             if not printed_tables[ prev_node ] then\n  139:                 print( str, v.leaf, \"in: \" )\n  140:                 printed_tables[ prev_node ] = true\n  141  \n  142                  local res = string.rep( \"-\", 12 )\n  ...\n  160                  end\n  161  \n  162:                 print( (\"-\"):rep(kl+vl+5) )\n  163                  for k,v in pairs( strs ) do\n  164:                     print( \"| \" .. k:left(kl) .. \"| \" .. v:left(vl) ..\"|\" )\n  165                  end\n  166  \n  167                  if key and count == 25 then\n  168:                     print( \"...\" )\n  169:                     print( \"(preview was longer the 25 lines so we abort here)\")\n  170                  else\n  171:                     print( (\"-\"):rep(kl+vl+5) )\n  172                  end\n  173              else\n  174:                 print( str, v.leaf, \"found in the same table as a previous item\" )\n  175              end\n  176          else\n  177:             print( str, v.leaf )\n  178          end\n  179      end\n  180      local num_found = #res.found_leafs\n  181      if num_found == 0 then\n  182:         print( \"Found nothing!\" )\n  183          if not item then\n  184:             print( \"Item was:\", item )\n  185          end\n  186      else\n  187:         print( \"Found \" .. tostring(num_found) .. \" items!\" )\n  188      end\n  189  end\n\n47 matches across 13 files\n\n\nSearching 31 files for \"applyClass\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Class.lua:\n   69  \tres._className = name\n   70  \n   71: \tres.applyClass = function(self, obj, ...)\n   72  \t\tsetmetatable(obj, self)\n   73  \t\tself.init(obj, ...)\n\n1 match in 1 file\n\n\nSearching 32 files for \"DrawPile\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\TestScene.lua:\n   24  \n   25  \n   26: world.drawPile = DrawPile({parent = root, x = 10, y = 300})\n   27  local cardsLayer = Layer({parent = root})\n   28  world.discPile = DiscardPile({parent = root, x = 780, y = 300})\n\nN:\\Programming\\Projects\\Love\\Star\\UiPile.lua:\n   25  end\n   26  \n   27: UiPile:newClass(\"DrawPile\")\n   28  \n   29: function DrawPile:init(config)\n   30: \tDrawPile.super.init(self, config)\n   31  \tSimpleButton({\n   32  \t\tparent = self, \n   ..\n   37  end\n   38  \n   39: function DrawPile:drawCard()\n   40  \tlocal card = table.remove(self)\n   41  \tif card then\n\n5 matches across 2 files\n\n\nSearching 33 files for \"rect.inside\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Collision.lua:\n    2  \n    3  rect = rect or {}\n    4: function rect.inside(r, v, y)\n    5  \tlocal x\n    6  \tif type(v) == \"table\" then\n\nN:\\Programming\\Projects\\Love\\Star\\UiObject.lua:\n   58  \n   59  function UiObject:isInside(x, y)\n   60: \treturn rect.inside(self, x, y)\n   61  end\n   62  \n\nN:\\Programming\\Projects\\Love\\Star\\UiPanel.lua:\n  132  \n  133  function UiPanel:isInside(x, y)\n  134: \tif rect.inside(self, x, y) then\n  135  \t\treturn true\n  136  \tend\n\n3 matches across 3 files\n\n\nSearching 33 files for \"getExtent\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\UiObject.lua:\n   53  end\n   54  \n   55: function UiObject:getExtent()\n   56  \treturn self.x, self.y, self.x + self.w, self.y + self.h\n   57  end\n\nN:\\Programming\\Projects\\Love\\Star\\UiPlacer.lua:\n   67  \n   68  function UiPlacer:setAtFrom(item)\n   69: \tself:_updateExtents(item:getExtent())\n   70  \n   71  \tif self._keep then\n\n2 matches across 2 files\n\n\nSearching 33 files for \"distance\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Math.lua:\n   12  end\n   13  \n   14: -- Returns the distance between two points.\n   15  function math.dist(x1,y1, x2,y2) return ((x2-x1)^2+(y2-y1)^2)^0.5 end\n   16  \n\nN:\\Programming\\Projects\\Love\\Star\\UiObject.lua:\n   64  end\n   65  \n   66: function UiObject:distance(x, y)\n   67  \treturn math.sqrt( vector.distSq(x, y, self:center()) )\n   68  end\n\n2 matches across 2 files\n\n\nSearching 34 files for \"rect\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Button.lua:\n   64  \t-- if self._hover then\n   65  \t-- \tlove.graphics.setColor(0.5, 1, 1, 0.3)\n   66: \t-- \tlove.graphics.rectangle(\"fill\", 0, 0, self.w, self.h)\n   67  \t-- end\n   68  \tif self._text then\n   ..\n   92  \tlocal color = self._hover and self.hoverBackColor or self.backColor\n   93  \tlg.setColor(unpack(color))\n   94: \tlg.rectangle(\"fill\", 0, 0, self.w, self.h)\n   95  \n   96  \tSimpleButton.super._draw(self)\n\nN:\\Programming\\Projects\\Love\\Star\\Collision.lua:\n    1  require \"Vector\"\n    2  \n    3: rect = rect or {}\n    4: function rect.inside(r, v, y)\n    5  \tlocal x\n    6  \tif type(v) == \"table\" then\n\nN:\\Programming\\Projects\\Love\\Star\\DragTest.lua:\n   13  \tlocal lg = love.graphics\n   14  \tlg.setColor(self.color)\n   15: \tlg.rectangle(\"fill\", 0, 0, self.w, self.h)\n   16  end\n   17  \n\nN:\\Programming\\Projects\\Love\\Star\\UiCard.lua:\n   70  \tlocal lg = love.graphics\n   71  \tlg.setColor(0, 0, 0)\n   72: \tlg.rectangle(\"fill\", 0, 0, self.w, self.h)\n   73  \tlg.setColor(1, 1, 1)\n   74: \tlg.rectangle(\"line\", 0, 0, self.w, self.h)\n   75  \n   76  \tlg.setFont(fonts.normal)\n\nN:\\Programming\\Projects\\Love\\Star\\UiObject.lua:\n   62  \n   63  function UiObject:isInside(x, y)\n   64: \treturn rect.inside(self, x, y)\n   65  end\n   66  \n\nN:\\Programming\\Projects\\Love\\Star\\UiPanel.lua:\n  107  \tself._lastWorld = { x, y }\n  108  \tif debugDrawPanel then\n  109: \t\tlg.rectangle(\"line\", 0, 0, self.w, self.h)\n  110  \tend\n  111  \tif self._allowOutside then\n  ...\n  132  \n  133  function UiPanel:isInside(x, y)\n  134: \tif rect.inside(self, x, y) then\n  135  \t\treturn true\n  136  \tend\n\nN:\\Programming\\Projects\\Love\\Star\\UiPile.lua:\n   15  \n   16  \tlg.setColor(0,0,0)\n   17: \tlg.rectangle(\"fill\", 0, 0, self.w, self.h)\n   18  \tlg.setColor(1,1,1)\n   19  \tlg.setFont(fonts.normal)\n   20: \tlg.rectangle(\"line\", 0, 0, self.w, self.h)\n   21  \n   22  \tlg.printf(tostring(#self), 0, self.h * 0.5 - 7, self.w, \"center\")\n\n13 matches across 7 files\n\n\nSearching 34 files for \"default(\" (case sensitive)\n\nN:\\Programming\\Projects\\Love\\Star\\Button.lua:\n   36  \n   37  function TextButton:init(config)\n   38: \tconfig = default(config, {\n   39  \t\ttext = \"\",\n   40  \t\tfont = fonts.normal,\n   ..\n   78  \n   79  function SimpleButton:init(config)\n   80: \tconfig = default(config, {\n   81  \t\tbackColor = {0.5, 0.5, 0.5},\n   82  \t\thoverBackColor = {0.3, 0.3, 0.3},\n\nN:\\Programming\\Projects\\Love\\Star\\Class.lua:\n   23  \n   24  -- Applies default values in the object if they are missing. References tables\n   25: function default(obj, def, ...)\n   26  \tobj = obj or {}\n   27  \tif not def then return obj end\n   ..\n   33  \tend\n   34  \t\n   35: \treturn default(obj, ...)\n   36  end\n   37  \n   ..\n   60  \tlocal res = old or fromTable or {}\n   61  \tif fromTable and res then\n   62: \t\tdefault(res, fromTable)\n   63  \tend\n   64  \t_G[name] = res\n\nN:\\Programming\\Projects\\Love\\Star\\DragTest.lua:\n    5  \n    6  function DragTest:init(config)\n    7: \tdefault(config, {input=true})\n    8  \tDragTest.super.init(self, config)\n    9  \tself.color = {math.random(), math.random(), math.random()}\n\nN:\\Programming\\Projects\\Love\\Star\\Drawable.lua:\n   72  \n   73  function Text:init(config)\n   74: \tdefault(config, {font = fonts.normal, text = \"\", color = {1,1,1}})\n   75  \tif type(config.keepW) == \"number\" then\n   76  \t\tconfig.w = config.keepW\n\nN:\\Programming\\Projects\\Love\\Star\\Hand.lua:\n    6  \n    7  function HandPile:init(playFunc, maxCards, config)\n    8: \tdefault(config, {\n    9  \t\tw = UiCard.W * 5, h = UiCard.H * 1.4,\n   10  \t})\n\nN:\\Programming\\Projects\\Love\\Star\\UiCard.lua:\n   10  \n   11  function UiCard:init(card, config)\n   12: \tdefault(config, {\n   13  \t\tinput = true,\n   14  \t\tw = self.W, h = self.H,\n\nN:\\Programming\\Projects\\Love\\Star\\UiObject.lua:\n    6  \n    7  function UiObject:init(config)\n    8: \tconfig = default(config, {\n    9  \t\tx = 0, y = 0,\n   10  \t\tw = 0, h = 0,\n\nN:\\Programming\\Projects\\Love\\Star\\UiPanel.lua:\n    9  \n   10  function Root(config)\n   11: \tconfig = default(config, {input = true})\n   12  \tlocal res = UiPanel(config)\n   13  \tres:setRoot(res)\n   ..\n   25  \n   26  function Layer(config)\n   27: \tconfig = default(config, {input = true})\n   28  \tlocal res = UiPanel(config)\n   29  \tres._allowOutside = true\n   ..\n  252  function UiPanel:newText(config, text)\n  253  \tif config == nil or type(config) == \"table\" then\n  254: \t\tconfig = default(config, {parent = self})\n  255  \telse\n  256  \t\tconfig = {font = config, text = text, parent = self}\n\nN:\\Programming\\Projects\\Love\\Star\\UiPile.lua:\n    4  \n    5  function UiPile:init(config)\n    6: \tdefault(config, {\n    7  \t\tinput = true,\n    8  \t\tw = 120, h = 150,\n\nN:\\Programming\\Projects\\Love\\Star\\UiPowerSystem.lua:\n    5  \n    6  function UiPowerSystems:init(powerSystem, config)\n    7: \tdefault(config, {input = true})\n    8  \tUiPowerSystems.super.init(self, config)\n    9  \tself._powerSystem = powerSystem\n   ..\n   41  \n   42  function UiPowerSubsystem:init(powerSystem, id, config)\n   43: \tdefault(config, {input = true})\n   44  \tUiPowerSubsystem.super.init(self, config)\n   45  \n\n16 matches across 10 files\n",
+			"settings":
+			{
+				"buffer_size": 13394,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"last_filter": "tabs",
+		"selected_items":
+		[
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"glsl",
+				"Set Syntax: OpenGL SL"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/N/Programming/Projects/Love/Star",
+		"/N/Programming/Projects/Love/Star/data"
+	],
+	"file_history":
+	[
+		"/N/Programming/Projects/Love/Dots/Math.lua",
+		"/N/Programming/Projects/Love/TileBased/Class.lua",
+		"/C/Users/Cpt. Red/Documents/Temp/embark_test_tomas_more/embark_zipcopy/ASSIGNMENT.md",
+		"/C/Users/Cpt. Red/Documents/Temp/embark_test_tomas_more/embark_zipcopy/diary.md",
+		"/C/Users/Cpt. Red/Documents/Temp/embark_test_tomas_more/embark_zipcopy/WormsGame/diary.md",
+		"/N/rpg/WOD -/Oxin's Style/Other/Housesitting/preset.js",
+		"/N/rpg/WOD -/Oxin's Style/Other/Housesitting/Housesitting v0.10.0fixed3 - PRE-PATCHED/preset org.js",
+		"/N/Programming/Projects/Godot/Creeps/Player.gd",
+		"/N/Programming/Projects/PyCount/RWBY.txt",
+		"/N/Programming/Projects/Love/TileBased/main.lua",
+		"/N/Programming/Projects/Love/TileBased/StaticRenderer.lua",
+		"/N/Programming/Projects/Love/Other/CoreCode.lua",
+		"/N/Programming/Projects/Love/Star/Class.lua",
+		"/N/Programming/Projects/Love/Star/Collision.lua",
+		"/N/Programming/Projects/Love/Star/Scene.lua",
+		"/N/Programming/Projects/Love/Star/DragTest.lua",
+		"/N/Programming/Projects/Love/Star/TestScene.lua",
+		"/N/Programming/Projects/Love/Other/UiPlacer.lua",
+		"/N/Programming/Projects/Love/Star/UiCard.lua",
+		"/N/Programming/Projects/Love/Star/Card.lua",
+		"/N/Programming/Projects/Love/Star/main.lua",
+		"/N/Programming/Projects/Love/Star/TODO.txt",
+		"/N/Programming/Projects/Love/Star/Strings.lua",
+		"/N/Programming/Projects/Love/Star/World.lua",
+		"/N/rpg/WOD -/Oxin's Style/Other/Night_crawling_is_BAD/Night crawling is BAD/read me 2.txt",
+		"/N/rpg/WOD -/Oxin's Style/Other/Night_crawling_is_BAD/Night crawling is BAD/read me 1.txt",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/settings.txt",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/system.log",
+		"/N/Programming/RopeHabsch - v2/README",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/error.log",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/text.log",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/setup.log",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/system_debug.log",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/ai.log",
+		"/C/Users/Cpt. Red/Documents/Paradox Interactive/Crusader Kings II/logs/converter.log",
+		"/N/Programming/RopeHabsch - v2/Saved/Logs/RopeHabsch.log",
+		"/N/rpg/WOD -/Oxin's Style/Other/Uncles_Human_Reproduction_Plan/Uncle's Human Reproduction Plan/おじさんの人類種付計画。ver0.1/英語(English manual)/11_Hints and tips.txt",
+		"/N/rpg/WOD -/Oxin's Style/Other/Uncles_Human_Reproduction_Plan/Uncle's Human Reproduction Plan/おじさんの人類種付計画。ver0.1/英語(English manual)/00_Key and Click operation.txt",
+		"/N/rpg/WOD -/Oxin's Style/Other/Uncles_Human_Reproduction_Plan/Uncle's Human Reproduction Plan/おじさんの人類種付計画。ver0.1/英語(English manual)/01_ Useful functions.txt",
+		"/N/rpg/WOD -/Oxin's Style/Other/Uncles_Human_Reproduction_Plan/Uncle's Human Reproduction Plan/おじさんの人類種付計画。ver0.1/ReadMe_EG.txt",
+		"/N/Spel/stone_soup-tiles-0.23/saves/Hasan.cs",
+		"/C/Users/Cpt. Red/Desktop/AutoHotkey/GearHeadTurn.ahk",
+		"/N/Games/gearhead-1/doc/TheRules.txt",
+		"/N/Games/gearhead-1/readme.md",
+		"/C/Users/Cpt. Red/Documents/Jobb sökning/Cover letter Paradox again.txt",
+		"/N/Programming/Projects/Love/Star/Button.lua",
+		"/N/Programming/Projects/Love/Star/UiPile.lua",
+		"/N/Programming/Projects/Love/Star/Table.lua",
+		"/N/Programming/Projects/Love/Star/IntrusiveList.lua",
+		"/N/Programming/Projects/Love/Star/UiPowerSystem.lua",
+		"/N/Programming/Projects/Love/Star/Hand.lua",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/items/transfer.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/items/classes.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/characters/char_helper_classes.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/characters/mc/profile.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/businesses&buildings/buildings_core.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/items/chars_equipment.rpy",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/code/core/characters/mc/profile.rpyc",
+		"/N/rpg/WOD -/Oxin's Style/Other/PyTFall-0.72-and-take-their-shit...-pc/game/options.rpy",
+		"/C/Users/Cpt. Red/Downloads/FalloutNewCaliforniaBETA213FullInstaller/Readme - FALLOUT NEW CALIFORNIA BETA 2 FOMOD-2-1-0.txt",
+		"/C/Users/Cpt. Red/Documents/My Games/Enderal/Enderal.ini",
+		"/C/Users/Cpt. Red/Documents/My Games/Enderal/EnderalPrefs.ini",
+		"/F/SteamLibrary/steamapps/common/Enderal/Data/SKSE/Plugins/CrashFixPlugin.ini",
+		"/C/Users/Cpt. Red/Documents/My Games/Skyrim/Logs/Script/Papyrus.0.log",
+		"/C/Users/Cpt. Red/Documents/My Games/Skyrim/Logs/Script/Papyrus.1.log",
+		"/C/Users/Cpt. Red/Documents/My Games/Skyrim/Logs/Script/Papyrus.2.log",
+		"/F/SteamLibrary/steamapps/common/Enderal/enderal readme.txt",
+		"/F/SteamLibrary/steamapps/common/Enderal/PapyrusUtilDev.log",
+		"/F/SteamLibrary/steamapps/common/Enderal/Data/SKSE/Plugins/CrashFixPluginLog.txt",
+		"/F/SteamLibrary/steamapps/common/Enderal/enderal_default.ini",
+		"/N/Programming/Projects/Love/Star/Vector.lua",
+		"/N/Programming/Projects/Love/Star/UiObject.lua",
+		"/N/Programming/Projects/Love/Star/Drawable.lua",
+		"/N/Programming/Projects/Love/Star/PowerSystems.lua",
+		"/N/Programming/Projects/Love/Star/Note.lua",
+		"/N/Programming/Projects/Love/Star/Util.lua",
+		"/N/Programming/Projects/Love/Star/ItemDefinitions.lua",
+		"/N/Programming/Projects/Love/Star/PowerSystemUi.lua",
+		"/N/Programming/Projects/Love/Star/List.lua",
+		"/N/Programming/Projects/Love/Star/Array.lua",
+		"/N/Programming/Projects/Love/Other/CoreDebug.lua",
+		"/N/Programming/Projects/Love/Star/Local.lua",
+		"/N/Programming/Projects/Love/Other/ExtendedPanel.lua",
+		"/N/Programming/Projects/Love/Other/AchievementListGui.lua",
+		"/N/Programming/Projects/Love/Other/ExtendedUiElemets.lua",
+		"/N/Programming/Projects/Love/Star/PowerSystem.lua",
+		"/N/Programming/Projects/Love/Other/AchievementDetailGui.lua",
+		"/N/Programming/Projects/Love/Star/Rectangle.lua",
+		"/N/Programming/Projects/Love/Star/Math.lua",
+		"/N/Programming/Projects/Love/Dots/Node.lua",
+		"/N/Programming/Projects/Love/Dots/UiObject.lua",
+		"/N/Programming/Projects/Love/Dots/EffectNode.lua",
+		"/N/Programming/Projects/Love/Star/Error.lua",
+		"/N/Programming/Projects/Love/Star/Node.lua",
+		"/N/rpg/WOD -/Oxin's Style!/Other/eratohoTW-eng-dev/ERB/SYSTEM.ERB",
+		"/N/rpg/WOD -/Oxin's Style!/Other/eratohoTW-eng-dev/sav/save18.sav",
+		"/N/Programming/Projects/Love/Dots/ItemDefinitions.lua",
+		"/N/Programming/Projects/Love/Dots/World.lua",
+		"/C/Users/Cpt. Red/AppData/Local/Mozilla/Firefox/Profiles/s5z1p512.default/.startup-incomplete",
+		"/N/Programming/Projects/Love/Dots/Dots.sublime-project",
+		"/N/Programming/Projects/Love/Dots/Connection.lua",
+		"/N/Programming/Projects/Love/Dots/Vector.lua",
+		"/N/Programming/Projects/Love/Dots/Class.lua",
+		"/N/Programming/Projects/Love/Dots/Collision.lua",
+		"/N/Programming/Projects/Love/Dots/TODO.txt",
+		"/N/Programming/Projects/Love/Dots/Rectangle.lua",
+		"/N/Programming/Projects/Love/Dots/start.cmd",
+		"/N/Programming/Projects/Love/TileBased/Vector.lua",
+		"/N/Programming/Projects/Love/Dots/Note.lua",
+		"/N/Programming/Projects/Love/TileBased/Mouse.lua",
+		"/N/Programming/Projects/Love/TileBased/RedTile.lua",
+		"/N/Programming/Projects/Love/TileBased/Tile.lua",
+		"/N/Programming/Projects/Love/TileBased/TiledCollisions.lua",
+		"/N/Programming/Projects/Love/Dots/Table - Copy.lua",
+		"/N/Programming/Projects/Love/Dots/Table.lua",
+		"/N/Programming/Projects/Love/TileBased/TiledRenderer.lua",
+		"/N/Programming/Projects/Love/TileBased/TiledContainer.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Path.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Node.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Mouse.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Asset.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Collision.lua",
+		"/N/Programming/Projects/Love/LudlumDare/Vector.lua",
+		"/N/Programming/Projects/Love/TileBased/Math.lua",
+		"/N/Programming/Projects/Love/TileBased/start.cmd",
+		"/N/Programming/Projects/Love/LudlumDare/main.lua",
+		"/N/Programming/Projects/Love/LudlumDare/start.cmd",
+		"/N/Programming/Projects/Love/LudlumDare/Math.lua"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"N:\\Programming\\Projects\\Love\\Star",
+			"N:\\rpg\\WOD -\\Oxin's Style!\\Other\\eratohoTW-eng-dev\\ERB",
+			"N:\\Programming\\Projects\\Love\\Dots",
+			"N:\\Programming\\Projects\\Love\\LudlumDare",
+			"N:\\Spel\\cddasdl-auto\\save",
+			"N:\\Spel\\cdda-source\\data",
+			"N:\\Spel\\cdda-source",
+			"N:\\Spel\\cddasdl-auto\\",
+			"N:\\Spel\\cddasdl-auto\\data"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"default(",
+			" or ",
+			"set_at_from",
+			"_updateExtents",
+			"left",
+			"rect",
+			"distance",
+			"getExtent",
+			"BranchPlacer",
+			"set_at_from",
+			"_xStart",
+			"_update_most",
+			"set_righttop",
+			"set_lefttop",
+			"border_x",
+			"_border_yPadding",
+			"_border_xPadding",
+			"rect.inside",
+			"_padd_y",
+			"_padd_x",
+			"left()",
+			"_start_y",
+			"_start_x",
+			"set_at",
+			"set_at_from",
+			"stop_keeping",
+			"set_keep_current",
+			"paddY",
+			"padd",
+			"paddX",
+			"padding_y",
+			"paddingX",
+			"padding_x",
+			"set_padding",
+			"create_branch",
+			" )",
+			"( ",
+			"_b",
+			"DrawPile",
+			"applyClass",
+			"set",
+			"print",
+			"play card",
+			"trigger",
+			"print",
+			"SimpleButton",
+			"playBtn",
+			"newText",
+			"font.",
+			"Text",
+			"font",
+			"table",
+			"canAdd",
+			"Card",
+			"fullscreen",
+			"control",
+			"Youmo",
+			"expected",
+			"testing(list:tostring(str)",
+			" \", ",
+			" \",",
+			" \"",
+			", ",
+			"expect",
+			"correct",
+			"str",
+			"world, ",
+			"world",
+			"print(",
+			"_tickNode",
+			"_drawabl",
+			"pairs(self._child)",
+			"_child",
+			"v,_ in pairs(self._child)",
+			"v,_ in pairs(self._child",
+			"v,_ in pairs(self._child)",
+			"_child",
+			"_drawable",
+			"_child",
+			"_inputChild:iter",
+			"_drawable",
+			"_inputChild",
+			"_inputNode",
+			"_inputChild",
+			"hand",
+			"wold",
+			"wolrd",
+			"root",
+			"remove",
+			"isEnd",
+			"ui",
+			"home",
+			"nickname",
+			"items_transfer",
+			"    ",
+			"   ",
+			"  ",
+			"tbl",
+			"Actor",
+			"rrow",
+			"f1PArrowTiltUpAngle",
+			"fov",
+			"UseOSAllocators",
+			"UiHand",
+			"center",
+			"ItemDefinitions",
+			"PowerSubsystemUi",
+			"PowerSystemsUi",
+			"__cg",
+			"ColorButton",
+			"TextRectButton",
+			"TextButton",
+			"TextRectButton",
+			"self.x",
+			"self.h",
+			"remove",
+			"()\n",
+			"_makeNode",
+			"_child",
+			"root",
+			"setColor",
+			"DragTest",
+			"str",
+			"riter",
+			"print",
+			"root",
+			"isEnd",
+			"pushFront"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"monoNormal",
+			"input",
+			"newClass",
+			"UiPanel"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Cpt. Red/Documents/Temp/embark_test_tomas_more/embark_zipcopy/WormsGame/diary.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4421,
+								4421
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1596.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Class.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								513
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/N/Programming/Projects/Love/StarOld/Class.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/N/Programming/Projects/Love/Dots/Class.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "UiPlacer.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								903,
+								903
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Rect.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								463
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/N/Programming/Projects/Love/Other/UiPlacer.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1765,
+								1765
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Card.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "World.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "data/TestCards.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "DefineCard.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								99
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "UiPanel.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "IntrusiveList.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3146,
+								3146
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2610.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "Button.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "UiObject.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								687
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "Drawable.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1850,
+								1847
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "UiPile.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/N/Programming/Projects/Love/Dots/Table.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/N/Programming/Projects/Love/Dots/main.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "Hand.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "Table.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13394,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										165,
+										170
+									],
+									[
+										258,
+										263
+									],
+									[
+										343,
+										348
+									],
+									[
+										478,
+										483
+									],
+									[
+										654,
+										659
+									],
+									[
+										763,
+										768
+									],
+									[
+										966,
+										971
+									],
+									[
+										1151,
+										1156
+									],
+									[
+										1371,
+										1376
+									],
+									[
+										1534,
+										1539
+									],
+									[
+										1772,
+										1777
+									],
+									[
+										1947,
+										1952
+									],
+									[
+										1972,
+										1977
+									],
+									[
+										2014,
+										2019
+									],
+									[
+										2182,
+										2187
+									],
+									[
+										2309,
+										2314
+									],
+									[
+										2428,
+										2433
+									],
+									[
+										2507,
+										2512
+									],
+									[
+										2649,
+										2654
+									],
+									[
+										2732,
+										2737
+									],
+									[
+										2757,
+										2762
+									],
+									[
+										2798,
+										2803
+									],
+									[
+										2947,
+										2952
+									],
+									[
+										3025,
+										3030
+									],
+									[
+										3135,
+										3140
+									],
+									[
+										3285,
+										3290
+									],
+									[
+										3441,
+										3446
+									],
+									[
+										3628,
+										3633
+									],
+									[
+										3896,
+										3901
+									],
+									[
+										3947,
+										3952
+									],
+									[
+										4212,
+										4217
+									],
+									[
+										4477,
+										4482
+									],
+									[
+										4533,
+										4538
+									],
+									[
+										4585,
+										4590
+									],
+									[
+										4749,
+										4754
+									],
+									[
+										4855,
+										4860
+									],
+									[
+										5024,
+										5029
+									],
+									[
+										5066,
+										5071
+									],
+									[
+										5182,
+										5187
+									],
+									[
+										5284,
+										5289
+									],
+									[
+										5413,
+										5418
+									],
+									[
+										5563,
+										5568
+									],
+									[
+										5640,
+										5645
+									],
+									[
+										5717,
+										5722
+									],
+									[
+										5976,
+										5986
+									],
+									[
+										6238,
+										6246
+									],
+									[
+										6491,
+										6499
+									],
+									[
+										6526,
+										6534
+									],
+									[
+										6556,
+										6564
+									],
+									[
+										6679,
+										6687
+									],
+									[
+										6941,
+										6952
+									],
+									[
+										7125,
+										7136
+									],
+									[
+										7274,
+										7285
+									],
+									[
+										7509,
+										7518
+									],
+									[
+										7727,
+										7736
+									],
+									[
+										7940,
+										7948
+									],
+									[
+										8147,
+										8155
+									],
+									[
+										8466,
+										8470
+									],
+									[
+										8676,
+										8680
+									],
+									[
+										8852,
+										8856
+									],
+									[
+										8859,
+										8863
+									],
+									[
+										8886,
+										8890
+									],
+									[
+										9083,
+										9087
+									],
+									[
+										9262,
+										9266
+									],
+									[
+										9342,
+										9346
+									],
+									[
+										9535,
+										9539
+									],
+									[
+										9704,
+										9708
+									],
+									[
+										9855,
+										9859
+									],
+									[
+										10010,
+										10014
+									],
+									[
+										10121,
+										10125
+									],
+									[
+										10435,
+										10443
+									],
+									[
+										10576,
+										10584
+									],
+									[
+										10831,
+										10839
+									],
+									[
+										10959,
+										10967
+									],
+									[
+										11088,
+										11096
+									],
+									[
+										11250,
+										11258
+									],
+									[
+										11488,
+										11496
+									],
+									[
+										11754,
+										11762
+									],
+									[
+										11935,
+										11943
+									],
+									[
+										12121,
+										12129
+									],
+									[
+										12287,
+										12295
+									],
+									[
+										12441,
+										12449
+									],
+									[
+										12669,
+										12677
+									],
+									[
+										12876,
+										12884
+									],
+									[
+										13071,
+										13079
+									],
+									[
+										13276,
+										13284
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								11758,
+								11758
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"glsv_configured": true,
+							"glsv_enabled": 1,
+							"glsv_spec": 0,
+							"line_numbers": false,
+							"output_tag": 8,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Star.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"main.lua"
+			],
+			[
+				"card",
+				"Card.lua"
+			],
+			[
+				"pile",
+				"UiPile.lua"
+			],
+			[
+				"ha",
+				"Hand.lua"
+			],
+			[
+				"class",
+				"Class.lua"
+			],
+			[
+				"list",
+				"IntrusiveList.lua"
+			],
+			[
+				"draw",
+				"Drawable.lua"
+			],
+			[
+				"powe",
+				"UiPowerSystem.lua"
+			],
+			[
+				"",
+				"IntrusiveList.lua"
+			],
+			[
+				"lis",
+				"IntrusiveList.lua"
+			],
+			[
+				"butt",
+				"Button.lua"
+			],
+			[
+				"ui",
+				"UiObject.lua"
+			],
+			[
+				"bu",
+				"Button.lua"
+			],
+			[
+				"button",
+				"Button.lua"
+			],
+			[
+				"strin",
+				"Strings.lua"
+			],
+			[
+				"note",
+				"Note.lua"
+			],
+			[
+				"coll",
+				"Collision.lua"
+			],
+			[
+				"conne",
+				"Connection.lua"
+			],
+			[
+				"clas",
+				"Class.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
